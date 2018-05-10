@@ -1,0 +1,6 @@
+<h1>Restaurant Index</h1>
+  <ol><% @restaurants.each do |r| %>
+    <li><strong><%= link_to r.name, restaurant_path(r) %></strong> (<%= r.category %>)</li>
+  <% end %>
+  </ol>
+ <h2><%= link_to "add a restaurant", new_restaurant_path %></h2>
